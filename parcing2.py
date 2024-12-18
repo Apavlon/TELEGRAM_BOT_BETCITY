@@ -156,32 +156,32 @@ def match_info():
                         ).text
                         print(corner_2)
 
-                        kick_on_goal_1 = WebDriverWait(driver, 5).until(
+                        kick_on_gate_1 = WebDriverWait(driver, 5).until(
                             EC.presence_of_element_located(
                                 (By.XPATH,
-                                 "/html/body/app-root/main/div/app-live-bets/app-scoreboard/div/div/div[2]/app-scoreboard-simple/app-livestat-table-info/div/div[2]/span[9]")
+                                 "/html/body/app-root/main/div/app-live-bets/app-scoreboard/div/div/div[2]/app-scoreboard-simple/app-livestat-table-info/div/div[2]/span[10]")
                             )
                         ).text
-                        print(kick_on_goal_1)
-                        kick_on_goal_2 = WebDriverWait(driver, 5).until(
+                        print(kick_on_gate_1)
+                        kick_on_gate_2 = WebDriverWait(driver, 5).until(
                             EC.presence_of_element_located(
                                 (By.XPATH,
-                                 "/html/body/app-root/main/div/app-live-bets/app-scoreboard/div/div/div[2]/app-scoreboard-simple/app-livestat-table-info/div/div[3]/span[9]")
+                                 "/html/body/app-root/main/div/app-live-bets/app-scoreboard/div/div/div[2]/app-scoreboard-simple/app-livestat-table-info/div/div[3]/span[10]")
                             )
                         ).text
-                        print(kick_on_goal_2)
+                        print(kick_on_gate_2)
 
                         kick_on_target_1 = WebDriverWait(driver, 5).until(
                             EC.presence_of_element_located(
                                 (By.XPATH,
-                                 "/html/body/app-root/main/div/app-live-bets/app-scoreboard/div/div/div[2]/app-scoreboard-simple/app-livestat-table-info/div/div[2]/span[8]")
+                                 "/html/body/app-root/main/div/app-live-bets/app-scoreboard/div/div/div[2]/app-scoreboard-simple/app-livestat-table-info/div/div[2]/span[9]")
                             )
                         ).text
                         print(kick_on_target_1)
                         kick_on_target_2 = WebDriverWait(driver, 5).until(
                             EC.presence_of_element_located(
                                 (By.XPATH,
-                                 "/html/body/app-root/main/div/app-live-bets/app-scoreboard/div/div/div[2]/app-scoreboard-simple/app-livestat-table-info/div/div[3]/span[8]")
+                                 "/html/body/app-root/main/div/app-live-bets/app-scoreboard/div/div/div[2]/app-scoreboard-simple/app-livestat-table-info/div/div[3]/span[9]")
                             )
                         ).text
                         print(kick_on_target_2)
@@ -237,7 +237,7 @@ def match_info():
                             "Счёт": score.replace(":", " - "),
                             "Время матча": match_time_2.replace("\n", " ").replace("   ", " ").strip(),
                             "Угловые": [corner_1, corner_2],
-                            "Удары по воротам": [kick_on_goal_1, kick_on_goal_2],
+                            "Удары по воротам": [kick_on_gate_1, kick_on_gate_2],
                             "Удары в створ": [kick_on_target_1, kick_on_target_2],
                             "Коэффициенты на победу": [coeff_1, coeff_2]
                         })
@@ -250,7 +250,7 @@ def match_info():
                             "Счёт": score.replace(":", " - "),
                             "Время матча": match_time_2.replace("\n", " ").replace("   ", " ").strip(),
                             "Угловые": [corner_1, corner_2],
-                            "Удары по воротам": [kick_on_goal_1, kick_on_goal_2],
+                            "Удары по воротам": [kick_on_gate_1, kick_on_gate_2],
                             "Удары в створ": [kick_on_target_1, kick_on_target_2],
                             "Коэффициенты на победу": [coeff_1, coeff_2]
                         })
