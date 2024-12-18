@@ -227,8 +227,8 @@ def match_info():
                         print(
                             f"Возможно, в этом матче отсутствуют некоторые данные, например: угловые.: {e}.")
 
-                    if red_card_1 != "0" and score_t_1 > score_t_2 and float(coeff_2) > 5:
-                        # if red_card_1 != "0" and score_t_1 > score_t_2:
+                    # if red_card_1 != "0" and score_t_1 > score_t_2 and float(coeff_2) > 5:
+                    if red_card_1 != "0" and score_t_1 != score_t_2:
 
                         # Добавляем данные о матче в список
                         info.append({
@@ -241,8 +241,8 @@ def match_info():
                             "Удары в створ": [kick_on_target_1, kick_on_target_2],
                             "Коэффициенты на победу": [coeff_1, coeff_2]
                         })
-                    elif red_card_2 != "0" and score_t_2 > score_t_1 and float(coeff_1) > 5:
-                        # elif red_card_2 != "0" and score_t_2 < score_t_1:
+                    # elif red_card_2 != "0" and score_t_2 > score_t_1 and float(coeff_1) > 5:
+                    elif red_card_2 != "0" and score_t_2 != score_t_1:
 
                         info.append({
                             f"Матч {index + 1}": two_team,
