@@ -104,16 +104,8 @@ def match_info():
                                 print(f"TEST redcard1 {red_card_1}")
 
                             except Exception:
-                                try:
-                                    red_card_1 = WebDriverWait(driver, 5).until(
-                                        EC.presence_of_element_located(
-                                            (By.XPATH, "/html/body/app-root/main/div/app-live-bets/app-scoreboard/div/div/div[2]/app-scoreboard-simple/div[1]/div[1]/div/span[1]")
-                                        )
-                                    ).text
-                                    print(f"TEST redcard1(2) {red_card_1}")
-                                except Exception:
-                                    print(
-                                        "Ошибка при получении red_card_1. Установлено значение по умолчанию: 0")
+                                print(
+                                    "Ошибка при получении red_card_1. Установлено значение по умолчанию: 0")
 
                             try:
                                 red_card_2 = WebDriverWait(driver, 5).until(
@@ -124,23 +116,15 @@ def match_info():
                                 ).text
                                 print(f"TEST redcard2(1) {red_card_2}")
                             except Exception:
-                                try:
-                                    red_card_2 = WebDriverWait(driver, 5).until(
-                                        EC.presence_of_element_located(
-                                            (By.XPATH,
-                                                "/html/body/app-root/main/div/app-live-bets/app-scoreboard/div/div/div[2]/app-scoreboard-simple/div[1]/div[3]/div/span[2]")
-                                        )
-                                    ).text
-                                    print(f"TEST redcard2(2) {red_card_2}")
-                                except Exception:
-                                    print(
-                                        "Ошибка при получении red_card_2. Установлено значение по умолчанию: 0")
-                                # После обработки данных по красным карточкам вы продолжаете сбор остальной информации
+                                print(
+                                    "Ошибка при получении red_card_2. Установлено значение по умолчанию: 0")
+
                             print(f"Красные карточки: {
                                   red_card_1}, {red_card_2}")
                         except Exception as e:
                             print(
                                 f"Ошибка при сборе информации о красных карточках: {e}")
+                        # После обработки данных по красным карточкам вы продолжаете сбор остальной информации
 
                         corner_1 = WebDriverWait(driver, 5).until(
                             EC.presence_of_element_located(
