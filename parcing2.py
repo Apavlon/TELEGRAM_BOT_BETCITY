@@ -56,7 +56,7 @@ def match_info():
                 if not red_card_element:
                     print(f"Матч {two_team} пропущен: нет красных карточек.")
                     continue
-
+                # Не рассматриваем статистику матчей
                 statistics = re.search(
                     r"(УГЛ|ЖК|удары в створ|фолы|офсайды|ауты|удары от ворот|выход мед. бригады на поле|уд. в штангу/перекладину)", two_team)
                 if statistics:
@@ -211,7 +211,7 @@ def match_info():
                     except Exception as e:
                         print(
                             f"Возможно, в этом матче отсутствуют некоторые данные, например: угловые.: {e}.")
-
+                    # Проверяем условия матча. Если соответствуют, добавляем в список целевых матчей
                     # if red_card_1 != "0" and score_t_1 > score_t_2 and float(coeff_2) > 5:
                     if red_card_1 != "0" and score_t_1 != score_t_2:
 
