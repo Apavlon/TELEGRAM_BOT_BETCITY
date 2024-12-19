@@ -102,6 +102,7 @@ def match_info():
                                     )
                                 ).text
                                 print(f"TEST redcard1 {red_card_1}")
+
                             except Exception:
                                 try:
                                     red_card_1 = WebDriverWait(driver, 5).until(
